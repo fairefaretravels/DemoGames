@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10101b">
+<meta name="description" content="Explore CSS and JavaScript browser game demos in the SenStack Arcade collection.">
+<title>SENSTACK ARCADE | Game Collection</title>
+
+<style>
+:root {
+  --bg: #10101b;
+  --card: #1b1b2b;
+  --text: #f7f7ff;
+  --muted: #aaaac1;
+  --accent: #a78bfa;
+  --border: #34344a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px 16px 48px;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top, #29204b 0%, transparent 50%),
+    var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  max-width: 1100px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(36px, 8vw, 64px);
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+header p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 32px 0 16px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.count {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.game-number {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.game-card h3 {
+  margin: 12px 0 8px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.game-card p {
+  flex: 1;
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.tag {
+  align-self: flex-start;
+  margin-bottom: 18px;
+  padding: 6px 10px;
+  color: #ddd2ff;
+  background: #342950;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.play-button {
+  display: block;
+  padding: 12px 16px;
+  color: #151020;
+  background: var(--accent);
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.play-button:hover {
+  background: #c4b5fd;
+}
+
+.play-button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+footer {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-inline: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-card {
+    padding: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="eyebrow">SenStack Presents</div>
+  <h1>SENSTACK <span>ARCADE</span></h1>
+  <p>
+    Eight games. Two collections.<br>
+    Explore browser games and discover your next project.
+  </p>
+</header>
+
+<main>
+
+  <div class="section-heading">
+    <h2>CSS Games</h2>
+    <span class="count">05 GAMES</span>
+  </div>
+
+  <div class="grid">
+
+    <article class="game-card">
+      <span class="game-number">GAME 01</span>
+      <h3>Connect 4</h3>
+      <p>A strategy board game built using CSS selectors and interactive game logic.</p>
+      <span class="tag">Strategy</span>
+      <a class="play-button"
+         href="https://freefrontend.com/css-games/#2026-01-01-can-has-connect-4-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 02</span>
+      <h3>The Backrooms</h3>
+      <p>Explore a surreal, unsettling environment in this CSS-based horror experience.</p>
+      <span class="tag">Horror</span>
+      <a class="play-button"
+         href="https://freefrontend.com/css-games/#2025-07-07-the-backrooms-css-edition-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 03</span>
+      <h3>Rock Paper Scissors</h3>
+      <p>A classic hand-gesture showdown using CSS-controlled interactions.</p>
+      <span class="tag">Casual</span>
+      <a class="play-button"
+         href="https://freefrontend.com/css-games/#css-rock-paper-scissors-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 04</span>
+      <h3>Tic-Tac-Toe</h3>
+      <p>A familiar X-and-O puzzle recreated with CSS and SVG techniques.</p>
+      <span class="tag">Puzzle</span>
+      <a class="play-button"
+         href="https://freefrontend.com/css-games/#pure-css-svg-tic-tac-toe-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 05</span>
+      <h3>The Caretaker</h3>
+      <p>A horror puzzle adventure built around interactive rooms and discoveries.</p>
+      <span class="tag">Horror Puzzle</span>
+      <a class="play-button"
+         href="https://freefrontend.com/css-games/#the-caretaker-a-pure-css-horror-puzzle-game-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+  </div>
+
+  <div class="section-heading">
+    <h2>JavaScript Games</h2>
+    <span class="count">03 GAMES</span>
+  </div>
+
+  <div class="grid">
+
+    <article class="game-card">
+      <span class="game-number">GAME 06</span>
+      <h3>3D Racing Pursuit</h3>
+      <p>A cinematic 3D driving challenge featuring obstacles, action, and fast-paced pursuits.</p>
+      <span class="tag">3D Racing</span>
+      <a class="play-button"
+         href="https://freefrontend.com/javascript-games/#2026-04-27-cinematic-3d-racing-pursuit-game-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 07</span>
+      <h3>Neon Space Shooter</h3>
+      <p>Fight enemy waves in a retro arcade shooter with particle effects and synthesized audio.</p>
+      <span class="tag">Arcade Shooter</span>
+      <a class="play-button"
+         href="https://freefrontend.com/javascript-games/#2026-04-27-neon-retro-canvas-space-shooter-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+    <article class="game-card">
+      <span class="game-number">GAME 08</span>
+      <h3>DOM Platformer</h3>
+      <p>Jump across platforms, navigate obstacles, and explore gamepad-compatible controls.</p>
+      <span class="tag">Platformer</span>
+      <a class="play-button"
+         href="https://freefrontend.com/javascript-games/#2025-11-20-dom-based-platformer-with-gamepad-api-support-l"
+         target="_blank" rel="noopener noreferrer">Open Game ↗</a>
+    </article>
+
+  </div>
+
+</main>
+
+<footer>
+  SENSTACK ARCADE · Game discovery collection<br>
+  Game demos and code belong to their respective creators.
+  Links open FreeFrontend in a new tab.
+</footer>
+
+</body>
+</html>
